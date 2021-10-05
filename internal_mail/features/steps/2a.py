@@ -19,9 +19,6 @@ def given(context):
     context.driver = webdriver.Chrome(os.path.join(ROOT_DIR, 'driver', 'chromedriver.exe'))
     context.driver.get("https://homologacao.leadfortaleza.com.br/ead/login")
     context.driver.maximize_window()
-
-@when("the user submits a message with a valid receiver, subject and message body (2a)")
-def when(context):
     # login
     context.driver.find_element_by_id('enUS').click()
     username = context.driver.find_element_by_id("login")
@@ -43,7 +40,9 @@ def when(context):
         pass
     
     time.sleep(1)
-    
+
+@when("the user submits a message with a valid receiver, subject and message body (2a)")
+def when(context):
     context.driver.find_element_by_xpath('/html/body/app-root/app-sidebar-layout/div/div/app-intern-mail/div[1]/app-intern-mail-tabs/ul/li[3]/div/label').click()
 
     # espera o carregamento da página
