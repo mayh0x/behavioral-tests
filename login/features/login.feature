@@ -8,4 +8,4 @@ Feature: Login
     Scenario: Login attempt with incorrect username and/or password (1b)
         Given a user accesses a login page (1b)
         When the user fills in the fields with incorrect username and/or password (1b)
-        Then it should see “Invalid username and/or password. Please check the username and password and try again.” (1b)
+        Then it should see “Invalid username and/or password. Please check your username and password and try again.” (1b)
