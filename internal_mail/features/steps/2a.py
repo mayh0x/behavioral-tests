@@ -60,7 +60,7 @@ def when(context):
     context.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);") # scroll down
     context.driver.find_element_by_id('btn-send').click()
 
-@then('it should see "Email sent successfully!" (2a)')
+@then('it should see "Email enviado com sucesso!" (2a)')
 def then(context):
     try:
         success = ec.text_to_be_present_in_element((By.XPATH, '/html/body/app-root/div/app-alert/div/div/div[1]'), "Email enviado com sucesso!")
